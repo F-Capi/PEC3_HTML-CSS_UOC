@@ -1,0 +1,79 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@400;700&display=swap");
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+body {
+  font-size: 16px;
+  font-family: "Mulish", sans-serif;
+  box-sizing: border-box;
+  background-color: #ffffff;
+}
+header,
+footer {
+  width: 100%;
+}
+.nav {
+  width: 100%;
+}
+.nav-flex-container {
+  background-color: #f3702a;
+  width: 100%;
+  height: 4.5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-flex-container-logo {
+  height: 100%;
+  max-height: 4rem;
+  margin-left: 0.7rem;
+}
+
+.nav-flex-container-icons {
+  margin-right: 3rem;
+  list-style: none;
+  display: inline-flex;
+}
+.nav-flex-container-icons a {
+  background: url("../img/sprite.png");
+  background-size: 660px 120px;
+  background-repeat: no-repeat;
+  height: 60px;
+  width: 60px;
+}
+
+#login-icon {
+  background-position: -240px 0;
+}
+#info-icon {
+  background-position: -300px 0;
+}
+#cart-icon {
+  background-position: -350px 0;
+}
+
+.nav-menu {
+  width: 100%;
+  padding-left: 2rem;
+  list-style: none;
+  background-color: #eaebe9;
+  display: inline-flex;
+  justify-content: flex-start;
+  gap: 1rem;
+  font-weight: bold;
+}
+
+.nav-menu li a {
+  display: block; /*ESTE ELEMENTO NO ES FLEX Y PARA DARLE PADDING DEBE SER BLOCK*/
+  color: black;
+  text-decoration: none;
+  padding: 0.5rem;
+}
+
+.nav-menu li a:hover {
+  color: #f3702a;
+}
