@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Mulish:wght@400;700&display=swap");
+@import url("https://fonts.cdnfonts.com/css/open-sans?styles=17414,20532");
 
 * {
   margin: 0px;
@@ -20,7 +21,7 @@ footer {
 .nav-flex-container {
   background-color: #f3702a;
   width: 100%;
-  height: 4.5rem;
+  height: 6rem;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -29,7 +30,7 @@ footer {
 
 .nav-flex-container-logo {
   height: 100%;
-  max-height: 4rem;
+  max-height: 6rem;
   margin-left: 0.7rem;
 }
 
@@ -40,33 +41,37 @@ footer {
 }
 .nav-flex-container-icons a {
   background: url("../img/sprite.png");
-  background-size: 660px 120px;
+  background-size: 880px 160px;
   background-repeat: no-repeat;
-  height: 60px;
-  width: 60px;
+  height: 80px;
+  width: 80px;
 }
-
+.nav-flex-container-icons a:hover {
+  opacity: 0.5;
+}
 #login-icon {
-  background-position: -240px 0;
+  background-position: -320px 0;
 }
 #info-icon {
-  background-position: -300px 0;
+  background-position: -400px 0;
 }
 #cart-icon {
-  background-position: -350px 0;
+  background-position: -480px 0;
 }
 
 .nav-menu {
   width: 100%;
-  padding-left: 2rem;
   list-style: none;
   background-color: #eaebe9;
-  display: inline-flex;
+  display: flex;
   justify-content: flex-start;
   gap: 1rem;
   font-weight: bold;
+  font-size: 22px;
 }
-
+.nav-menu li:first-child {
+  padding-left: 2rem;
+}
 .nav-menu li a {
   display: block; /*ESTE ELEMENTO NO ES FLEX Y PARA DARLE PADDING DEBE SER BLOCK*/
   color: black;
@@ -76,4 +81,83 @@ footer {
 
 .nav-menu li a:hover {
   color: #f3702a;
+}
+
+/*CONTENIDO DE PRODUCT-LIST*/
+
+main {
+  margin: 10px auto;
+  width: 90%;
+  max-width: 1170px;
+  height: 1000px;
+}
+.results {
+  font-size: 20px;
+  margin-top: 10px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+#pen {
+  font-weight: bold;
+  font-family: "Open Sans Condensed", sans-serif;
+  font-size: 22px;
+}
+#n-results {
+  font-size: 16px;
+  font-style: italic;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.products-list {
+  flex: 5;
+  display: flex;
+}
+.product-item {
+  flex-basis: 100%;
+  border: 1px solid #736d75;
+  border-radius: 15px;
+}
+.product-item img {
+  margin: 15px;
+  max-width: 180px;
+}
+.description {
+  background-color: #f3702a;
+}
+.price {
+}
+
+/*Categories*/
+
+.categories {
+  flex: 1;
+  list-style: none;
+  font-size: 22px;
+  font-family: "Open Sans Condensed", sans-serif;
+  color: #f3702a;
+}
+
+.categories li {
+  border-top: 1px dashed black;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.categories a {
+  margin-left: 5px;
+}
+.categories li::after {
+  content: "+";
+  font-weight: bold;
+  font-size: 1.5em;
+  color: #736d75;
+}
+.categories li:last-child {
+  border-bottom: 1px dashed black;
 }
