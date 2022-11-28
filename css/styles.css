@@ -21,7 +21,7 @@ footer {
 .nav-flex-container {
   background-color: #f3702a;
   width: 100%;
-  height: 6rem;
+  height: 6.4rem;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -30,7 +30,7 @@ footer {
 
 .nav-flex-container-logo {
   height: 100%;
-  max-height: 6rem;
+  max-height: 5.6rem;
   margin-left: 0.7rem;
 }
 
@@ -40,22 +40,24 @@ footer {
   display: inline-flex;
 }
 .nav-flex-container-icons a {
-  background: url("../img/sprite.png");
-  background-size: 880px 160px;
+  background-image: url("../img/sprite.png");
   background-repeat: no-repeat;
+  background-size: 880px 160px;
   height: 80px;
   width: 80px;
 }
-.nav-flex-container-icons a:hover {
-  opacity: 0.5;
+.pagination .pagination-box:hover,
+.nav-flex-container-icons .icon:hover,
+.price-container .icon:hover {
+  background-position-y: -80px;
 }
-#login-icon {
+.nav-flex-container-icons .login-icon {
   background-position: -320px 0;
 }
-#info-icon {
+.nav-flex-container-icons .info-icon {
   background-position: -400px 0;
 }
-#cart-icon {
+.nav-flex-container-icons .cart-icon {
   background-position: -480px 0;
 }
 
@@ -80,7 +82,7 @@ footer {
 }
 
 .nav-menu li a:hover {
-  color: #f3702a;
+  color: #cc4700;
 }
 
 /*CONTENIDO DE PRODUCT-LIST*/
@@ -111,28 +113,90 @@ main {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  gap: 2rem;
+  gap: 1.5rem;
 }
 
 .products-list {
   flex: 5;
   display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 .product-item {
-  flex-basis: 100%;
   border: 1px solid #736d75;
+  flex-basis: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
   border-radius: 15px;
 }
+
 .product-item img {
-  margin: 15px;
+  align-self: center;
   max-width: 180px;
+  flex-basis: 15%;
+  margin: 15px;
 }
 .description {
-  background-color: #f3702a;
+  flex-basis: 55%;
 }
-.price {
+.description h2 {
+  margin-left: 10px;
+  margin-top: 20px;
+  font-family: "Open Sans Condensed", sans-serif;
+  font-size: 25px;
+  line-height: 1;
+}
+.description h2 a {
+  color: #cc4700;
+  text-decoration: none;
 }
 
+.description ul {
+  list-style: none;
+  margin: 20px 0px 0px 20px;
+}
+.description ul li::before {
+  content: "\2022";
+  font-size: 8px;
+  position: relative;
+  top: -2px;
+  left: -5px;
+}
+.price-container {
+  flex-basis: 30%;
+  align-self: stretch;
+  border: 1px solid #736d75;
+  border-top-right-radius: 13px;
+  border-bottom-right-radius: 13px;
+  background-color: #736d75;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.price-container a {
+  background-image: url("../img/sprite.png");
+  background-size: 880px 160px;
+  background-repeat: no-repeat;
+  height: 80px;
+  width: 80px;
+}
+.price-number {
+  margin-right: 25px;
+  font-family: "Open Sans Condensed", sans-serif;
+  font-size: 4em;
+  font-weight: bold;
+  color: #ffffff;
+}
+.price-container .cart-icon {
+  margin-right: 20px;
+  background-position: -560px 0;
+}
+.categories li a:hover,
+.description h2 a:hover {
+  color: #272f2e;
+}
 /*Categories*/
 
 .categories {
@@ -140,24 +204,66 @@ main {
   list-style: none;
   font-size: 22px;
   font-family: "Open Sans Condensed", sans-serif;
-  color: #f3702a;
 }
 
 .categories li {
+  line-height: 1.85;
   border-top: 1px dashed black;
   display: flex;
   align-items: center;
+
   justify-content: space-between;
 }
-.categories a {
+.categories li a {
+  text-decoration: none;
+
+  color: #cc4700;
   margin-left: 5px;
 }
 .categories li::after {
   content: "+";
   font-weight: bold;
-  font-size: 1.5em;
+  font-size: 1.5rem;
   color: #736d75;
 }
 .categories li:last-child {
   border-bottom: 1px dashed black;
+}
+
+.pagination {
+  margin: 100px auto;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  display: flex;
+}
+
+.pagination > a {
+  text-decoration: none;
+}
+
+.pagination-box {
+  font-family: "Open Sans Condensed", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  height: 80px;
+  width: 80px;
+}
+.pagination-box:hover {
+  color: #736d75;
+}
+.left-arrow,
+.right-arrow {
+  background-image: url("../img/sprite.png");
+  background-repeat: no-repeat;
+  background-size: 880px 160px;
+}
+
+.left-arrow {
+  background-position: -720px 0px;
+}
+.right-arrow {
+  background-position: -800px 0px;
 }
