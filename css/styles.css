@@ -243,6 +243,7 @@ main {
 }
 
 .pagination-box {
+  color: black;
   font-family: "Open Sans Condensed", sans-serif;
   display: flex;
   justify-content: center;
@@ -267,3 +268,5 @@ main {
 .right-arrow {
   background-position: -800px 0px;
 }
+
+/*FOOTER*/
