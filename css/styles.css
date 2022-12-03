@@ -46,9 +46,10 @@ footer {
   height: 80px;
   width: 80px;
 }
-.pagination .pagination-box:hover,
 .nav-flex-container-icons .icon:hover,
-.price-container .icon:hover {
+.price-container .icon:hover,
+.product-cart-icon:hover,
+.product-heart-icon:hover {
   background-position-y: -80px;
 }
 .nav-flex-container-icons .login-icon {
@@ -91,7 +92,6 @@ main {
   margin: 10px auto;
   width: 90%;
   max-width: 1170px;
-  height: 1000px;
 }
 .results {
   font-size: 20px;
@@ -154,7 +154,7 @@ main {
 
 .description ul {
   list-style: none;
-  margin: 20px 0px 0px 20px;
+  margin: 20px 0px 10px 20px;
 }
 .description ul li::before {
   content: "\2022";
@@ -231,6 +231,9 @@ main {
 }
 
 .pagination {
+  width: 100%;
+  max-width: 420px;
+  max-height: 60px;
   margin: 100px auto;
   justify-content: center;
   align-items: center;
@@ -249,24 +252,345 @@ main {
   justify-content: center;
   align-items: center;
   font-size: 25px;
-  height: 80px;
-  width: 80px;
+
+  flex: 1 1 100%;
 }
 .pagination-box:hover {
   color: #736d75;
 }
 .left-arrow,
 .right-arrow {
+  flex-grow: 1;
+  flex-basis: 100%;
+  min-width: 60px;
+  height: 60px;
+
   background-image: url("../img/sprite.png");
   background-repeat: no-repeat;
-  background-size: 880px 160px;
+  background-size: 660px 120px;
 }
 
 .left-arrow {
-  background-position: -720px 0px;
+  background-position: -540px 0px;
 }
 .right-arrow {
-  background-position: -800px 0px;
+  background-position: -600px 0px;
 }
 
+.left-arrow:hover,
+.right-arrow:hover {
+  background-position-y: -60px;
+}
 /*FOOTER*/
+
+.top-footer {
+  overflow: hidden;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.top-footer-part-left {
+  max-width: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  flex: 1 1 50%;
+}
+
+.top-footer-logo {
+  height: 40%;
+}
+
+.top-footer-logo {
+  max-height: 150px;
+}
+.top-footer-logo img {
+  height: 100%;
+}
+.top-footer-part-left ul {
+  list-style: none;
+  margin-right: 30px;
+}
+
+.top-footer-part-right {
+  border-left: 1px dashed #736d75;
+  max-width: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  flex: 1 1 50%;
+}
+
+.top-footer-part-right .social-ìcon {
+  background-image: url("../img/sprite.png");
+  background-size: 550px 100px;
+  width: 50px;
+  height: 50px;
+}
+
+.social-ìcon:hover {
+  background-position-y: -50px;
+}
+
+.icon-face {
+  background-position: 0px 0px;
+}
+
+.icon-in {
+  background-position: -50px 0px;
+}
+
+.icon-twitter {
+  background-position: -100px 0px;
+}
+
+.icon-insta {
+  background-position: -150px 0px;
+}
+
+.offers {
+  font-family: "Open Sans Condensed", sans-serif;
+}
+.number {
+  color: #cc4700;
+  font-size: 22px;
+}
+
+.bottom-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  width: 100%;
+  margin-top: 30px;
+  padding: 1.2rem 0;
+  background-color: #272f2e;
+}
+.bottom-footer a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.bottom-footer a:hover {
+  color: #736d75;
+}
+
+.bottom-footer span::before {
+  line-height: 25px;
+  color: white;
+  content: "\2022";
+  font-size: 7px;
+}
+
+/*Single-product page*/
+
+main {
+  max-width: 1170px;
+}
+
+.product-path {
+  padding: 0.3rem;
+  margin-bottom: 1.3rem;
+  background-color: #eaebe9;
+}
+.product-path a {
+  color: #cc4700;
+  font-weight: bold;
+  text-decoration: none;
+}
+.product-path a:hover {
+  color: #272f2e;
+  font-weight: bold;
+  text-decoration: none;
+  text-decoration: underline;
+}
+
+main h2 {
+  color: #cc4700;
+  font-family: "Open Sans Condensed", sans-serif;
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+
+.single-product {
+  display: flex;
+  max-width: 100%;
+}
+
+.single-product-img {
+  align-self: center;
+  flex: 25%;
+  height: auto;
+  max-width: 25%;
+  min-width: 270px;
+}
+.single-product-description {
+  flex: 55%;
+  padding: 18px;
+}
+
+.single-product-description p {
+  margin-bottom: 10px;
+}
+.single-product-description ul {
+  list-style: none;
+  margin-left: 10px;
+}
+.single-product-description ul li::before {
+  content: "\2022";
+  font-size: 8px;
+  position: relative;
+  top: -2px;
+  left: -5px;
+}
+
+.single-product-price-container {
+  background-color: #736d75;
+  flex: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.single-product-price-top {
+  width: 85%;
+  flex-basis: 45%;
+  border-bottom: 1px dotted #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.single-product-price {
+  color: white;
+  font-family: "Open Sans Condensed", sans-serif;
+  font-weight: bold;
+  font-size: 55px;
+}
+.single-product-price::after {
+  font-family: "Open Sans", sans-serif;
+  font-weight: normal;
+  font-size: 0.95rem;
+  margin-left: 9px;
+  content: "Unit";
+}
+.single-product-price-top p {
+  padding: 15px 0px 10px 0px;
+  color: white;
+  font-size: 0.95rem;
+}
+
+.single-product-price-bottom {
+  width: 90%;
+  flex-basis: 55%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+.single-product-price-bottom a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 1.3rem;
+  display: flex;
+  align-items: center;
+}
+
+.single-product-price-bottom a:first-child {
+  padding-top: 10px;
+}
+
+.product-cart-icon,
+.product-heart-icon {
+  background-image: url("../img/sprite.png");
+  background-size: 880px 160px;
+  background-repeat: no-repeat;
+  height: 80px;
+  width: 80px;
+}
+
+.product-cart-icon {
+  background-position: -560px 0;
+}
+
+.product-heart-icon {
+  background-position: -640px 0;
+}
+
+/* tabla */
+
+table {
+  margin: 60px 0px;
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table,
+tr,
+td {
+  border: 1px dotted #736d75;
+}
+
+table tr:first-child,
+table tr:first-child td,
+table {
+  border-top: none;
+}
+
+caption {
+  text-align: left;
+  padding: 5px;
+  background-color: #eaebe9;
+  font-weight: bold;
+}
+td {
+  padding: 15px 7px;
+  vertical-align: baseline;
+}
+
+/*BANNER*/
+
+.banner-section {
+  margin: 100px 0px;
+}
+.banner {
+  background-image: linear-gradient(
+      rgba(50, 50, 50, 0.7),
+      rgba(50, 50, 50, 0.7)
+    ),
+    url(../img/Black-Twist-Pen-on-Notebook-pexels-mohammad-danish.jpg);
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner h3 {
+  color: #eaebe9;
+  font-size: 39px;
+  font-weight: bold;
+  font-family: "Open Sans Condensed", sans-serif;
+}
+
+.banner button {
+  margin-top: 20px;
+  border-radius: 5px;
+  border: none;
+  padding: 5px 15px;
+  background-color: #cc4700;
+  color: #ffffff;
+  font-size: 23px;
+
+  font-family: "Open Sans Condensed", sans-serif;
+}
