@@ -197,8 +197,8 @@ main {
 .description h2 a:hover {
   color: #272f2e;
 }
-/*Categories*/
 
+/*Categories*/
 .categories {
   flex: 1;
   list-style: none;
@@ -220,12 +220,18 @@ main {
   color: #cc4700;
   margin-left: 5px;
 }
+
+.categories li:hover::after {
+  color: #cc4700;
+}
+
 .categories li::after {
   content: "+";
   font-weight: bold;
   font-size: 1.5rem;
   color: #736d75;
 }
+
 .categories li:last-child {
   border-bottom: 1px dashed black;
 }
@@ -295,24 +301,20 @@ main {
   max-width: 400px;
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 1.5rem;
-  flex: 1 1 50%;
+  justify-content: flex-end;
+  gap: 1rem;
 }
 
-.top-footer-logo {
-  height: 40%;
-}
-
-.top-footer-logo {
-  max-height: 150px;
-}
-.top-footer-logo img {
-  height: 100%;
-}
 .top-footer-part-left ul {
+  max-width: 50%;
   list-style: none;
   margin-right: 30px;
+}
+.top-footer-logo {
+  max-width: 50%;
+}
+.top-footer-logo img {
+  max-height: 75px;
 }
 
 .top-footer-part-right {
